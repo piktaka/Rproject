@@ -62,3 +62,8 @@ my_tuple <- c(my_tuple,liste[[3]])
  
  
  main_matrix  <- matrix(my_tuple,nrow = element_length,ncol = element_length,byrow = FALSE)
+
+w <- solve(main_matrix,x)
+for(i in 1:n){
+  
+}
