@@ -9,12 +9,16 @@ x <-matrix(ncol=1,nrow=n,byrow=FALSE)
 for(i in 1:n){
  x[i, ]=(b^i-a^i)/i
 }
-print("enter les points f(x)")
+print("enter les points Xi")
 my_element_list <- c()
 for(i in 1:n){
 my_element_list <- c(my_element_list,as.integer(readline()))
 }
-
+print("enter les images f(Xi)")
+pointsList <- c()
+for(i in 1:n){
+pointsList <- c(pointsLisr,as.integer(readline()))
+}
 
 
 
