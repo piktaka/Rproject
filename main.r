@@ -1,7 +1,19 @@
+n <- as.integer(readline(prompt="le nombres des points: "))	
+a <- as.integer(readline(prompt="le min de l'interval: "))
+b <- as.integer(readline(prompt="le max de l'interval: "))
+x <-matrix(ncol=1,nrow=n,byrow=FALSE) 
+for(i in 1:n){
+ x[i, ]=(b^i-a^i)/i
+}
+print("enter les points f(x)")
+my_element_list <- c()
+for(i in 1:n){
+my_element_list <- c(my_element_list,as.integer(readline()))
+}
+
 
 rm(list = ls())
 
-my_element_list <- list(3,2,1)
 
 
 element_length=length(my_element_list)
