@@ -1,3 +1,7 @@
+rm(list = ls())
+
+
+
 n <- as.integer(readline(prompt="le nombres des points: "))	
 a <- as.integer(readline(prompt="le min de l'interval: "))
 b <- as.integer(readline(prompt="le max de l'interval: "))
@@ -12,7 +16,6 @@ my_element_list <- c(my_element_list,as.integer(readline()))
 }
 
 
-rm(list = ls())
 
 
 
