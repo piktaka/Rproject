@@ -5,16 +5,20 @@ n <- as.integer(readline(prompt="le nombres des points: "))
 
 a <- as.integer(readline(prompt="le min de l'interval: "))
 b <- as.integer(readline(prompt="le max de l'interval: "))
-    x <-matrix(ncol=1,nrow=n,byrow=FALSE) 
-    for(i in 1:n){
-    x[i, ]=(b^i-a^i)/i
-    }
-    print("enter les points Xi")
-    my_element_list <- c()
-    for(i in 1:n){
-    my_element_list <- c(my_element_list,as.integer(readline()))
-    }
-
+x <-matrix(ncol=1,nrow=n,byrow=FALSE) 
+for(i in 1:n){
+  x[i, ]=(b^i-a^i)/i
+}
+print("enter les points Xi")
+my_element_list <- c()
+for(i in 1:n){
+  my_element_list <- c(my_element_list,as.integer(readline()))
+}
+points <- c()
+print("enter les images f(Xi)")
+for(i in 0:n){
+  points <- c(points,as.integer(readline()))
+}
 
 
 
@@ -47,8 +51,8 @@ for (element in my_element_list){
 
  
  
- main_matrix  <- matrix(my_columns,nrow = element_length+1,ncol = element_length,byrow = FALSE)
 
+ main_matrix  <- matrix(my_columns,nrow = element_length+1,ncol = element_length,byrow = FALSE)
  main_matrix
  
  
@@ -58,3 +62,11 @@ for (element in my_element_list){
  
  
  
+
+integ <-0
+for(i in 0:n){
+  integ <- integ + (solution[i]*points[i])
+}
+
+print("l'intégrale de f(x) in [a,b]=")
+integ
