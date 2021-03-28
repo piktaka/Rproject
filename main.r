@@ -24,47 +24,30 @@ element_length=length(my_element_list)
 
 
 
-my_column <- list()
-my_columns <- list()
+my_column <- c()
+my_columns <- c()
 
-index_of_columns <- 1
-index_of_column <-1
 
 
 for (element in my_element_list){
 
 
 
-  for(power  in 0:element_length)
+  for(power  in 0:element_length-1)
  {
  
 
- my_column[[index_of_column]] <- element^(power)
- index_of_column <- index_of_column+1
+ my_column <- c(my_column,element^(power))
  }
- my_columns[[index_of_columns]] <- my_column
- index_of_columns <- index_of_columns + 1
- index_of_column <- 1
- my_column <- list()
+ my_columns <- c(my_column,my_columns)
+ my_column <- c()
  }
  
  
- my_tuple=c()
- for (liste in my_columns) {
-     
-     print(liste)
-  
-  my_tuple <- c(my_tuple,liste[[1]])
-my_tuple <- c(my_tuple,liste[[2]])
-my_tuple <- c(my_tuple,liste[[3]])
-my_tuple <- c(my_tuple,liste[[4]])
 
  
  
- }   
- 
- 
- main_matrix  <- matrix(my_tuple,nrow = element_length+1,ncol = element_length,byrow = FALSE)
+ main_matrix  <- matrix(my_columns,nrow = element_length+1,ncol = element_length,byrow = FALSE)
 
  main_matrix
  
